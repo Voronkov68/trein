@@ -215,7 +215,161 @@ favorite_languages ={
 print()
 lang = favorite_languages['alexander']
 print(F"Sasha favorute language is {lang.title()}")
+print()
 
 alient = {'color': 'green', 'points': 5}
 pint = alient.get('olor', 'No data')
 print(pint)
+
+
+print()
+user_0 = {
+	'username': 'undead',
+	'first': 'alexander',
+	'last': 'voronkov',
+}
+
+for key, value in user_0.items():
+	print(f"Key: {key}")
+	print(f"Value: {value}")
+print()
+
+favorite_languages ={
+	'alexander': 'python',
+	'albert': 'java',
+	'anastasia': 'c++',
+}
+
+for name, lang in favorite_languages.items():
+	print(f"{name.title()} favorite language is {lang.title()}")
+
+print()
+favorite_languages ={
+	'alexander': 'python',
+	'albert': 'java',
+	'anastasia': 'c++',
+}
+
+for key in favorite_languages.keys():
+	print(key.title())
+ 
+
+
+favorite_languages ={
+	'alexander': 'python',
+	'albert': 'java',
+	'anastasia': 'c++',
+}
+
+friend = ['albert', 'sarah']
+for name in favorite_languages.keys():
+	print(name.title())
+	if name in friend:
+		lang = favorite_languages[name]
+		print(f"\n{name.title()} your favor lang  is {lang.title()}")
+
+if 'erwin' not in favorite_languages.keys():
+	print("erwin, please take our pool")
+
+
+for name in sorted(favorite_languages.keys()):
+	print(f"{name.title()}, thank you for the taking the pool")
+
+
+for val in favorite_languages.values():
+	print(val)
+
+for valu in set(favorite_languages.values()):
+	print(valu)
+
+alien0 = {'color': 'green', 'point': '1212'}
+alien1 = {'color': 'yelow', 'point': '12'}
+alien2 = {'color': 'green', 'point': '122'}
+
+aliens = [alien1, alien0, alien2]
+
+for va in aliens:
+	print(va) 
+
+aliens = []
+
+for alien in range(30):
+	new_aliens = {'color': 'green', 'points': 10, 'speed': 'slow'}
+	aliens.append(new_aliens)
+
+for alien in aliens[:5]:
+	print(alien)
+
+print(f"Total number of the aliens: {len(aliens)}")
+print()
+
+
+
+aliens = []
+
+for ali in range(0,30):
+	new = {'color': 'green', 'points': 1212, 'speed': 'slow'}
+	aliens.append(new)
+
+print(aliens)
+print()
+for ali in aliens[0:3]:
+	if ali['color'] == 'green':
+		ali['color'] = 'yellow'
+		ali['spped'] = 'medium'
+		ali['points'] = 10
+
+for ali in aliens[0:5]:
+	print(ali)
+
+
+
+pizza = {
+	'crust': 'thinks',
+	'toppings': ['mushrooms', 'extra cheese'],
+}
+
+print(f"You order a {pizza['crust']}- crust pizza")
+for topp in pizza['toppings']:
+	print("\t" + topp)
+
+print(pizza['toppings'])
+
+
+
+
+lub_lang = {
+	'jen': ['python', 'ruby'],
+	'alexander': ['python'],
+	'edward': ['c++', 'ruby'],
+	'phil': ['python', 'haskell'],
+}
+
+for name, language in lub_lang.items():
+	print(f"\n {name.title()}")
+	for lang in language:
+		print(f"\t{lang.title()}")
+
+
+
+users = {
+	'undead':  {
+		'firstname': 'alexander',
+		'lastname': 'voronkov',
+		'location': 'moskow',
+		},
+	'mcurie': {
+		'firstname': 'marie',
+		'lastname': 'curie',
+		'location': 'paris',
+		}
+}
+
+print(users)
+
+for usr, info in users.items():
+	print(f"\n Username: {usr.title()}")
+	full_name = f"{info['firstname']} {info['lastname']}"
+	location = f"{info['location']}"
+	print(f"\tFullname: {full_name.title()}")
+	print(f"\tLocation {location.title()}")
