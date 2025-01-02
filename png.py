@@ -373,3 +373,111 @@ for usr, info in users.items():
 	location = f"{info['location']}"
 	print(f"\tFullname: {full_name.title()}")
 	print(f"\tLocation {location.title()}")
+
+
+
+
+prompt = "if you us who are you, we can personalizae the message you see"
+prompt += "\nWhat is your name  ?"
+print(prompt)
+
+current_number = 1
+while current_number <= 5:
+	print(current_number)
+	current_number += 1
+
+
+
+
+
+n = 1 
+
+while n <= 20:
+	print(n)
+	n += 1
+
+current_number = 0
+while current_number < 10:
+	current_number += 1
+	if current_number % 2 == 0:
+		continue
+	print(current_number)
+
+
+uncorfirmed_user = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+while uncorfirmed_user:
+	current = uncorfirmed_user.pop()
+
+	print(f"Verifying user: {current}")
+	confirmed_users.append(current)
+
+print("\nThe following users have been confirmed: ")
+for confirmed_user in confirmed_users:
+	print(confirmed_user.title())
+
+
+
+def greet_user():
+	"""Выводит простое приветствие"""
+	print("Hello!:)")
+
+greet_user()
+
+
+def greet_user(username):
+	print(f"Hello, {username.title()}")
+
+greet_user('alex')
+
+
+print()
+
+def print_model(unprint, printed):
+	"""Печать моделей"""
+	while unprint:
+		curr = unprint.pop()
+		print(f"Printed model: {curr}")
+		printed.append(curr)
+
+def show_printed(printed):
+	"""Показывает сделанные модели"""
+	print("\nThe following models have been printed: ")
+	for pri  in printed:
+		print(pri)
+
+unprinted = ['phone case', 'robot pendant', 'dodecahedron']
+printed = []
+
+print_model(unprinted, printed)
+print(printed)
+
+show_printed(printed)
+
+
+def make_pizza(*toppings):
+	"""Вывод списка заказных топингов"""
+	print(toppings)
+
+make_pizza('peperoni')
+make_pizza('peperoni', 'green peppers', 'extra cheese')
+
+def make_pizza(*toppings):
+	"""Вывод списка заказных топингов"""
+	print("\nMaking a pizza with the following toppings: ")
+	for top in toppings:
+		print(f"- {top}")
+
+
+make_pizza('peperoni')
+make_pizza('peperoni', 'green peppers', 'extra cheese')
+
+def make_pizza(size, *toppings):
+	"""Вывод списка заказных топингов"""
+	print(f"\nMaking a {size} pizza with the following toppings: ")
+	for top in toppings:
+		print(f"- {top}")
+
+make_pizza(16, 'peperoni')
+make_pizza(28, 'peperoni', 'green peppers', 'extra cheese')
