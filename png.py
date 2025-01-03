@@ -481,3 +481,26 @@ def make_pizza(size, *toppings):
 
 make_pizza(16, 'peperoni')
 make_pizza(28, 'peperoni', 'green peppers', 'extra cheese')
+
+class Dog():
+	"""Простая модель собаки """
+
+	def __init__(self, name, age):
+		"""Метод инициализирует атрибуты name и age"""
+		self.name = name
+		self.age  = age 
+
+	def sit(self):
+		"""Собака садиться по команде"""
+		print(f"{self.name.title()} is now sitting.")
+
+	def roll_over(self):
+		"""Собака перекатывается по команде"""
+		print(f"{self.name} rolled over!")
+
+
+dog1 = Dog('max', 10)
+print(dog1.name)
+print(dog1.age)
+dog1.sit()
+dog1.roll_over()
