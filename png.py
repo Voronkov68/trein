@@ -504,3 +504,37 @@ print(dog1.name)
 print(dog1.age)
 dog1.sit()
 dog1.roll_over()
+
+your_dog = Dog('lucy', 3)
+print(your_dog.name)
+print(your_dog.age)
+your_dog.sit()
+your_dog.roll_over()
+
+list1 = [1, 2, 4, 10, 121, 12]
+list2 = [7, 77, 777]
+list1.append(90)
+list1.extend(list2)
+print(list1)
+print(list2)
+
+class Restaurant():
+	'''Класс описывающий ресторан'''
+	def __init__(self, restaurant_name, cuisine_type):
+	 	'''Инициализация атрибутов описания ресторана'''
+	 	self.restaurant_name = restaurant_name
+	 	self.cuisine_type = cuisine_type
+
+	def describe_restaurant(self):
+	 	'''Метод выводит атрибуты экземпляря'''
+	 	print(f"{self.restaurant_name} {self.cuisine_type}")
+
+	def open_restaurant(self):
+	 	'''Выводит инфу о том что рестик открыт'''
+	 	print(f"Restaurant {self.restaurant_name} is open! willkommen!")
+
+restaurant = Restaurant('Cloude monet', 'air')
+print(f"{restaurant.restaurant_name}")
+print(f"{restaurant.cuisine_type}")
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
