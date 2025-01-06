@@ -538,3 +538,26 @@ print(f"{restaurant.restaurant_name}")
 print(f"{restaurant.cuisine_type}")
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+class User():
+	'''Describe user'''
+
+	def __init__(self, first_name, last_name, age):
+		'''Инициализация атрибутов пользователя'''
+		self.first_name = first_name
+		self.last_name = last_name
+		self.age = age 
+
+	def describe_user(self):
+		'''Выводит инфу о пользователе'''
+		full_name = f"{self.first_name} {self.last_name}"
+		print(f"Fullname: {full_name} age: {self.age}")
+
+	def great_user(self):
+		'''Приветствует пользователя'''
+		print(f"Hello, {self.first_name}")
+
+alex = User('sasha', 'voron', '22')
+print(f"{alex.first_name} {alex.age} ")
+alex.describe_user()
+alex.great_user()
