@@ -571,11 +571,45 @@ class Car():
 		self.make = make
 		self.model = model 
 		self.year = year 
+		self.odometr_reading = 0
 
 	def get_describe_name(self):
 		'''Возвращает аккуратно отформатированное значение'''
 		long_name =f"{self.make} {self.model} {self.year}"
 		return long_name.title()
 
+	def read_odometr(self):
+		'''Выводит пробеш машины в метрах'''
+		print(f"This car has {self.odometr_reading} miles on it")
+
+	def update_odometr(self, mileage):
+		'''Устанавливает заданное значение на одометре'''
+		if mileage >= self.odometr_reading:
+			self.odometr_reading = mileage
+		else:
+			print("You can't roll back an odometer")
+
+	def increment_odometr(self, miles):
+		'''Увеличивает показание с приращением'''
+		self.odometr_reading += miles
+
+
+
+
 new_car = Car('bmw', 'e90', '2002')
 print(new_car.get_describe_name())
+new_car.read_odometr()
+new_car.odometr_reading = 25
+new_car.read_odometr()
+print()
+new_car.update_odometr(23)
+new_car.read_odometr()
+print()
+
+car2 = Car('subaru','outback', 2015)
+print(car2.get_describe_name())
+car2.update_odometr(23_500)
+car2.read_odometr()
+
+car2.increment_odometr(100)
+car2.read_odometr()
