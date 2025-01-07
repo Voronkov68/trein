@@ -561,3 +561,21 @@ alex = User('sasha', 'voron', '22')
 print(f"{alex.first_name} {alex.age} ")
 alex.describe_user()
 alex.great_user()
+
+
+class Car():
+	'''Описание протого авто'''
+
+	def __init__(self, make, model, year):
+		'''Инициализация атрибутов описания авто'''
+		self.make = make
+		self.model = model 
+		self.year = year 
+
+	def get_describe_name(self):
+		'''Возвращает аккуратно отформатированное значение'''
+		long_name =f"{self.make} {self.model} {self.year}"
+		return long_name.title()
+
+new_car = Car('bmw', 'e90', '2002')
+print(new_car.get_describe_name())
