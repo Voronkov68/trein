@@ -613,3 +613,25 @@ car2.read_odometr()
 
 car2.increment_odometr(100)
 car2.read_odometr()
+
+
+
+
+
+
+class ElectricCar(Car):
+	'''Представляет аспекты машины, спецефические для электромобилей'''
+
+	def __init__(self, year, model, make):
+		'''инициализирует атрибуты класса родителя'''
+
+		super().__init__(make, model, year)
+		self.battery_size = 75
+
+	def describe_battery(self):
+		'''Выводит инфу о мощности акумулятора'''
+		print(f"This car has a {self.battery_size}-kWh battery")
+
+my_tesla = ElectricCar('tesla', 'model`s', '2019')
+print(my_tesla.get_describe_name())
+my_tesla.describe_battery()
