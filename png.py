@@ -533,6 +533,14 @@ class Restaurant():
 	 	'''Выводит инфу о том что рестик открыт'''
 	 	print(f"Restaurant {self.restaurant_name} is open! willkommen!")
 
+
+class Icecreamstandart(Restaurant):
+	'''мороженное'''
+
+	def __init__(self, flavors):
+		self.flavors = flavors
+
+
 restaurant = Restaurant('Cloude monet', 'air')
 print(f"{restaurant.restaurant_name}")
 print(f"{restaurant.cuisine_type}")
@@ -593,7 +601,9 @@ class Car():
 		'''Увеличивает показание с приращением'''
 		self.odometr_reading += miles
 
-
+	def full_gas_tank(self):
+		'''Заправка авто'''
+		print('Машина заправляеться')
 
 
 new_car = Car('bmw', 'e90', '2002')
@@ -614,8 +624,28 @@ car2.read_odometr()
 car2.increment_odometr(100)
 car2.read_odometr()
 
+new_car.full_gas_tank()
 
 
+
+class Battery():
+	'''Простая модель акума авто'''
+
+	def __init__(self, battery_size=75):
+		self.battery_size = battery_size
+
+
+	def describe_battery(self):
+		'''Выводит инфу о мощности акумулятора'''
+		print(f"This car has a {self.battery_size}-kWh battery")
+
+	def get_range(self):
+		'''Выводит приблизительный запас хода'''
+		if self.battery_size == 75:
+			range = 260
+		elif self.battery_size == 100:
+			range = 315
+		print(f"This car can go about {range} miles on a full charge.")
 
 
 
@@ -626,12 +656,21 @@ class ElectricCar(Car):
 		'''инициализирует атрибуты класса родителя'''
 
 		super().__init__(make, model, year)
-		self.battery_size = 75
+		self.battery = Battery()
 
-	def describe_battery(self):
-		'''Выводит инфу о мощности акумулятора'''
-		print(f"This car has a {self.battery_size}-kWh battery")
+	
+
+	def full_gas_tank(self):
+		'''Заправки нет'''
+		print('This car doesn t need a gas tank!')
+
+
+
+
+
 
 my_tesla = ElectricCar('tesla', 'model`s', '2019')
 print(my_tesla.get_describe_name())
-my_tesla.describe_battery()
+my_tesla.battery.describe_battery()
+my_tesla.full_gas_tank()
+my_tesla.battery.get_range()
