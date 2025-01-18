@@ -674,3 +674,8 @@ print(my_tesla.get_describe_name())
 my_tesla.battery.describe_battery()
 my_tesla.full_gas_tank()
 my_tesla.battery.get_range()
+
+
+with open('pi.txt') as p:
+	content = p.read()
+print(content)
