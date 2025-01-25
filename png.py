@@ -679,3 +679,8 @@ my_tesla.battery.get_range()
 with open('pi.txt') as p:
 	content = p.read()
 print(content)
+
+
+
+
+
