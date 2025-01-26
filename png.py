@@ -684,3 +684,4 @@ print(content)
 
 
 
+print(__name__)
